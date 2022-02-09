@@ -1,68 +1,38 @@
 import React from "react";
-import { links } from "globalData";
-import { IconBaseProps } from "react-icons";
+import { siteName, SocialLink, socialLinks } from "globalData";
 import Link from "./Link";
-/* import {
-  FaFacebookF,
-  FaInstagram,
-  FaTelegram,
-  FaTelegramPlane,
-  FaTwitter,
-} from "react-icons/fa"; */
 
-export interface SocialLinkProps {
-  link: string;
-  icon: (props: IconBaseProps) => JSX.Element;
-}
-/* 
-const SocialLink = ({ link, icon }: SocialLinkProps) => (
-  <a
-    href={link}
-    rel="noopener nofollow"
-    className="text-white p-3.5 mx-2 ring-1 ring-gray-400 rounded-full hover:bg-primary-500 transition"
+const Social = ({ name, icon, url }: SocialLink) => (
+  <Link
+    key={name}
+    className="px-5 py-3 text-sm font-semibold hover:text-primary-50
+    focus:text-primary-50 transition-colors duration-300"
+    to={url}
   >
-    {icon({ className: "h-4 w-4" })}
-  </a>
+    {icon({ className: "h-6 w-6" })}
+  </Link>
 );
 
-const socials: SocialLinkProps[] = [
-  {
-    link: "https://twitter.com/KryptoliteSwap",
-    icon: (props) => <FaTwitter {...props} />,
-  },
-  {
-    link: "https://fb.me/KryptoliteCommunity",
-    icon: (props) => <FaFacebookF {...props} />,
-  },
-  {
-    link: "https://t.me/KryptoliteCommunity",
-    icon: (props) => <FaTelegram {...props} />,
-  },
-  {
-    link: "https://t.me/KryptoliteNews",
-    icon: (props) => <FaTelegramPlane {...props} />,
-  },
-  {
-    link: "https://instagram.com/kryptolite_community",
-    icon: (props) => <FaInstagram {...props} />,
-  },
-]; */
-
 export default function PrimaryFooter() {
+  const socials = [] as unknown as SocialLink[];
+
+  for (const social in socialLinks) {
+    if (Object.prototype.hasOwnProperty.call(socialLinks, social)) {
+      const element = socialLinks[social];
+      socials.push(element);
+    }
+  }
   return (
-    <footer>
+    <footer className="bg-primary-500 text-white">
       <div>
-        <div className="container mx-auto py-4 px-5 flex flex-col justify-center">
-          <div className="text-center my-4 flex flex-wrap justify-center">
-            {links.map(({ name, ...rest }, i) => (
-              <Link
-                key={name}
-                className="px-5 py-3 text-sm font-semibold hover:text-primary-700
-                focus:text-primary-500 transition-colors duration-300"
-                {...rest}
-              >
-                {name}
-              </Link>
+        <div className="container mx-auto py-4 px-5 flex flex-col md:flex-row justify-between items-center">
+          <Link to="/" className="text-lg font-semibold tracking-widest uppercase
+                rounded-lg focus:outline-none focus:shadow-outline">
+            {siteName}
+          </Link>
+          <div className="text-center flex justify-center">
+            {socials.map(({ ...props }, i) => (
+              <Social {...props} />
             ))}
           </div>
           <div className="text-sm text-center">

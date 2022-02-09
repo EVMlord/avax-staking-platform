@@ -32,12 +32,9 @@ const ConnectWalletButton = ({action}: ButtonProps & { action?: (...args: any[])
         </button>
       )}
       {!active && !error && (
-        <button
-          className="relative block w-full lg:inline-block py-1.5 px-3 font-bold lg:rounded-full outline-none transition focus-within:ring bg-blue-700 text-white hover:bg-blue-800 focus:bg-blue-800 ring-blue-400 cursor-pointer"
-          onClick={openModal}
-        >
+        <Button onClick={openModal} variant="outlined" className="py-2 px-4 w-full md:w-auto">
           Connect wallet
-        </button>
+        </Button>
       )}
       {!active && error && (
         <Button

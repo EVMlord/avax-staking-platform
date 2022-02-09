@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "components/Layout";
 import SEO from "components/SEO";
 import StakingTable from "components/Tables/StakingTable";
+import FaqAccordion from "components/widgets/Accordion/FaqAccordion";
+import { stakingFaqs } from "globalData";
 
 export default function Stake() {
   return (
@@ -40,8 +42,14 @@ export default function Stake() {
           </div>
         </div>
         <div className="my-8">
-          <h3>MY STAKES</h3>
-          <StakingTable />
+          <h3 className="text-center">MY STAKES</h3>
+          <div className="flex flex-col items-center md:flex-row-reverse md:items-start gap-4">
+            <StakingTable />
+            <div className="max-w-xs p-2 md:bg-gray-50">
+              <h3 className="text-center">Page FAQ</h3>
+              <FaqAccordion faqs={stakingFaqs} expandedUuids={["what_is_staking"]} />
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

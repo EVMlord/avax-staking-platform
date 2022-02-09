@@ -6,7 +6,7 @@ export default function Link({ children, to, button, className, ...other }: Link
 
   const asButtonClass = button? `bg-white inline-block text-primary-600 hover:bg-primary-50/80
   hover:shadow-md focus:bg-primary-50/80 focus:shadow-lg ring-2 ring-primary-500
-  py-3 px-5 font-bold rounded-full !outline-none transition` : '';
+  py-3 px-5 font-bold !outline-none transition` : '';
   // Use React router Link for internal links, and <a> for others
   if (internal) {
     return (

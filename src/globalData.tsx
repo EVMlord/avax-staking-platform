@@ -1,3 +1,8 @@
+import { IconBaseProps } from "react-icons";
+import { FaTelegram, FaTwitter } from "react-icons/fa";
+
+export const siteName = "ASP STAKING PLATFORM";
+
 export const links = [
   {
     name: "Home",
@@ -14,15 +19,10 @@ export const links = [
   {
     name: "Referrals",
     to: "/referrals",
-  },
-  {
-    name: "Contract",
-    to: "/contract",
-  },
+  }
 ];
 
-
-export const questionsAndAnswers = [
+export const stakingFaqs = [
   {
     question: "What is staking?",
     answer: `You can stake your GXY tokens for a fixed number of days to earn interest on them.
@@ -66,3 +66,54 @@ export const questionsAndAnswers = [
     answer: `You will receive your TRX dividends after you exit your stake position.`,
   },
 ];
+
+
+export const auctionFaqs = [
+  {
+    question: "What are auction lobbies?",
+    answer: `Auction lobbies are Daily Auctions that offer ASP tokens for AVAX based on the ASP
+      and AXAV pool at the end of the day.`,
+  },
+  {
+    question: "How much ASP do lobbies pay?",
+    answer: `Lobbies ASP pool will start from 5 million ASP per day and goes until 1 million over
+      the next 365 days but never goes lower than 1 million tokens per day.`,
+  },
+  {
+    question: "Buying tokens from exchnage or participating in auction?",
+    answer: `Auction lobbies are an other way to buy ASP tokens that might be more profitable
+      than purchasing on exchanges. Plus the ASP spent is rewarded back to Stakers.`,
+  },
+  {
+    question: "Where does all the AVAX go?",
+    answer: `Dividends, well at least 95% of them!! The other 5% reserve for promotion and
+      platform development costs.`,
+  },
+  {
+    question: "When do lobbies end?",
+    answer: `Lobbies are daily, Every day at 00:00 UTC`,
+  },
+];
+
+export type SocialLink = {
+  name: string;
+  url: string;
+  icon: (props: IconBaseProps) => JSX.Element;
+};
+
+export interface SocialLinkProps {
+  [key: string]: SocialLink;
+}
+
+export const socialLinks: SocialLinkProps = {
+  twitter: {
+    name: "Twitter",
+    url: "https://twitter.com/asptokens?s=21",
+    icon: (props) => <FaTwitter {...props} />,
+  },
+  telegram: {
+    name: "Telegram",
+    url: "https://t.me/aspstake",
+    icon: (props) => <FaTelegram {...props} />,
+  },
+};

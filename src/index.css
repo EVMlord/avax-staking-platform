@@ -15,8 +15,9 @@ h1 {
 h2 {
   @apply text-4xl md:text-5xl mb-4 md:mb-8;
 }
-h1, h2, h3 {
-  @apply bg-gradient-to-r from-primary-900 via-primary-400 to-primary-300 bg-clip-text text-transparent;
+
+h3 {
+  @apply my-4;
 }
 h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-bold;

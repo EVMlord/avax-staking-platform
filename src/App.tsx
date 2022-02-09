@@ -13,6 +13,7 @@ import NotFound from "views/NotFound";
 import { getLibrary } from "utils/web3React";
 import Stake from "views/Stake";
 import Referrals from "views/Referrals";
+import Auction from "views/Auction";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/stake" element={<Stake />} />
                     <Route path="/referrals" element={<Referrals />} />
+                    <Route path="/auction" element={<Auction />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </ModalProvider>

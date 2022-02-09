@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import logo from "logo.png";
 import Link from "./Link";
 import ConnectWalletButton from "./Button/ConnectWalletButton";
-import { links } from "globalData";
+import { links, siteName } from "globalData";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,26 +19,19 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full text-gray-700 bg-white">
+    <div className="w-full text-white bg-primary-500 py-5">
       <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div className="flex flex-row items-center justify-between">
           <Link
             to="/"
-            className="text-lg font-semibold tracking-widest text-gray-900 uppercase
+            className="text-lg font-semibold tracking-widest uppercase
                 rounded-lg focus:outline-none focus:shadow-outline"
           >
-            <div className="inline-block">
-              <img
-                src={logo}
-                alt="KRL logo"
-                width={54}
-                className="inline-block m-2 antialiased"
-              />
-            </div>
-            ASP
+            {siteName}
           </Link>
           <button
-            className="rounded-lg md:hidden p-1 hover:bg-gray-200 focus:outline-none focus:bg-gray-200"
+            className="rounded-lg md:hidden p-1 hover:bg-gray-200 focus:outline-none
+              focus:bg-gray-100 hover:text-primary focus:text-primary"
             onClick={toggleMenu}
           >
             <svg fill="currentColor" viewBox="0 0 20 20" className="w-8 h-8">
