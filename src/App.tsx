@@ -30,7 +30,7 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/stake" element={<Stake />} />
                     <Route path="/referrals" element={<Referrals />} />
-                    <Route path="/auction" element={<Auction />} />
+                    <Route path="/auctions" element={<Auction />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </ModalProvider>

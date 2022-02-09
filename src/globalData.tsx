@@ -14,7 +14,7 @@ export const links = [
   },
   {
     name: "Auction",
-    to: "/auction",
+    to: "/auctions",
   },
   {
     name: "Referrals",
