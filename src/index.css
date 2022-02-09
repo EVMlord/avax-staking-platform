@@ -1,13 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply font-sans h-screen text-lg bg-white text-gray-800 scroll-smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8 leading-tight;
+}
+
+h2 {
+  @apply text-4xl md:text-5xl mb-4 md:mb-8;
+}
+h1, h2, h3 {
+  @apply bg-gradient-to-r from-primary-900 via-primary-400 to-primary-300 bg-clip-text text-transparent;
+}
+h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+}
+
+@layer components {
+  th div, td div, {
+    @apply px-5 max-w-[150px];
+  }
 }

@@ -1,8 +1,10 @@
 {
-  "name": "playground",
+  "name": "avax-staking-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@binance-chain/bsc-connector": "^1.0.0",
+    "@reduxjs/toolkit": "^1.7.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -10,16 +12,44 @@
     "@types/node": "^16.11.22",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@uniswap/v2-core": "^1.0.1",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/walletconnect-connector": "^6.2.8",
+    "axios": "^0.25.0",
+    "big.js": "^6.1.1",
+    "bignumber.js": "^9.0.2",
+    "buffer": "^6.0.3",
+    "classnames": "^2.3.1",
+    "decimal.js-light": "^2.5.1",
+    "ethers": "^5.5.4",
+    "jsbi": "^4.1.0",
+    "lodash": "^4.17.21",
+    "process": "^0.11.10",
     "react": "^17.0.2",
+    "react-accessible-accordion": "^4.0.0",
+    "react-app-rewired": "^2.1.11",
+    "react-countup": "^6.1.0",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-redux": "^7.2.6",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-step-progress-bar": "^1.0.3",
+    "react-transition-group": "^4.4.2",
+    "redux-localstorage-simple": "^2.4.1",
+    "tiny-invariant": "^1.2.0",
+    "tiny-warning": "^1.0.3",
+    "toformat": "^2.0.0",
     "typescript": "^4.5.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +69,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/big.js": "^6.1.2",
+    "@types/lodash": "^4.14.178",
+    "@types/react-helmet": "^6.1.5",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-transition-group": "^4.4.4",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.19"
   }
 }
