@@ -1,6 +1,5 @@
-import Button from "components/Button/Button";
 import React, { useRef, useState } from "react";
-import { FaRegClipboard } from "react-icons/fa";
+import Button from "components/Button/Button";
 
 interface CopyToClipboardProps {
   title?: string;
@@ -39,16 +38,10 @@ export default function CopyToClipboard({
             {content}
           </code>
         </pre>
-        <button
-          className="shadow ml-1 p-1 flex-none bg-white text-blue-500"
-          onClick={copyAddress}
-        >
-          <FaRegClipboard className="h-6 w-6" />
-        </button>
         {copied && (
           <span
-            className="absolute p-1 bg-gray-50 ring-1 ring-gray-500 right-12
-          top-1/2 -translate-y-2/3 text-xs font-medium text-gray-600"
+            className="absolute p-1 bg-gray-50 ring-1 ring-gray-500 right-2
+          top-2 text-xs font-medium text-gray-600"
           >
             Copied!
           </span>
