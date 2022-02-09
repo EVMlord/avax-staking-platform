@@ -35,7 +35,7 @@ export default function FaqAccordion({faqs, expandedUuids}: FaqAccordionProps) {
                     hover:bg-primary-50/20 hover:ring-primary-50/40 transition-all duration-300
                     ${
                       expanded
-                        ? "bg-primary-50/20"
+                        ? "bg-primary-50/20 ring-primary-50"
                         : ""
                     }`}
                 >

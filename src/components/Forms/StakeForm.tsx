@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "components/Button/Button";
 
-export default function StakeForm() {
+export default function StakeForm({ className }: { className?: string }) {
   const [stakeAmount, setStakeAmount] = useState("");
   const [daysToStake, setDaysToStake] = useState("");
 
@@ -19,7 +19,7 @@ export default function StakeForm() {
     e.preventDefault();
   };
   return (
-    <div className="px-2 mx-2 border-b py-5">
+    <div className={`border-b py-5 max-w-sm ${className}`}>
       <div className="flex justify-between items-end">
         Stake
         <span className="text-sm">
@@ -27,7 +27,7 @@ export default function StakeForm() {
           <span className="text-primary-700 font-semibold text-xl">ASP</span>
         </span>
       </div>
-      <form onSubmit={handleStake} autoComplete="off" >
+      <form onSubmit={handleStake} autoComplete="off">
         <div className="relative border p-3 rounded-md block my-2">
           <label htmlFor="amount" className="text-sm mb-2">
             Amount to Stake
