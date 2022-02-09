@@ -25,7 +25,7 @@ export default function Button({
       break;
 
     case "secondary":
-      variantClass = "bg-primary-500 ring-primary text-white hover:bg-primary-600 focus:bg-primary-600 rounded-md";
+      variantClass = "bg-primary-500 ring-primary text-white hover:bg-primary-600 focus:bg-primary-600";
       break;
 
     case "outlined":

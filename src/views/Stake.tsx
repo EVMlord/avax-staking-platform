@@ -4,6 +4,7 @@ import SEO from "components/SEO";
 import StakingTable from "components/Tables/StakingTable";
 import FaqAccordion from "components/widgets/Accordion/FaqAccordion";
 import { stakingFaqs } from "globalData";
+import StakeForm from "components/Forms/StakeForm";
 
 export default function Stake() {
   return (
@@ -45,7 +46,8 @@ export default function Stake() {
           <h3 className="text-center">MY STAKES</h3>
           <div className="flex flex-col items-center md:flex-row-reverse md:items-start gap-4">
             <StakingTable />
-            <div className="max-w-xs p-2 md:bg-gray-50">
+            <div className="max-w-xs p-2 md:bg-gray-50/80">
+              <StakeForm />
               <h3 className="text-center">Page FAQ</h3>
               <FaqAccordion faqs={stakingFaqs} expandedUuids={["what_is_staking"]} />
             </div>
