@@ -29,11 +29,11 @@ export default function SEO({
         htmlAttributes={{ lang }}
         {...(title
           ? {
-              titleTemplate: `%s — AVAX Staking Platform`,
+              titleTemplate: `%s — ASP Staking Platform`,
               title,
             }
           : {
-              title: `ASP — Official website`,
+              title: `ASP Staking Platform`,
             })}
         meta={[
           {
@@ -46,7 +46,7 @@ export default function SEO({
           },
           {
             property: "og:title",
-            content: title || "AVAX Staking Platform",
+            content: title || "ASP Staking Platform",
           },
           {
             property: "og:description",
@@ -58,7 +58,7 @@ export default function SEO({
           },
           {
             name: "twitter:title",
-            content: title || "AVAX Staking Platform",
+            content: title || "ASP Staking Platform",
           },
           {
             name: "twitter:description",

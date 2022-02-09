@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <Layout>
       <SEO
-        title="Stake it till you make it - Longer and Bigger Pays Better!"
+        title="ASP Staking Platform"
         slug="Home"
         pageDescription="Stake your ASP tokens within the Staking Portal and earn daily
           interest. Additionally, Stakers are rewarded AVAX tokens from the
