@@ -12,8 +12,8 @@ export default function Auction() {
       <SEO
         slug="/auction"
         title="Stake to earn more"
-        pageDescription="Stake your ASP tokens within the Staking Portal and earn daily interest.
-            Additionally, Stakers are rewarded AVAX tokens from the daily Lobbies based off the
+        pageDescription="Stake your AVAX tokens within the Auction Portal and earn daily interest.
+            Additionally, Stakers are rewarded ASP tokens from the daily Lobbies based off the
             percentage of total tokens beign staked."
       />
       <div className="px-4 pt-20 max-w-screen-2xl mx-auto">
