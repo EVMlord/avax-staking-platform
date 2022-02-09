@@ -24,10 +24,10 @@ const ConnectWalletButton = ({action}: ButtonProps & { action?: (...args: any[])
         <button
           aria-label="Open connect modal"
           onClick={openModal}
-          className="block w-full lg:inline-block text-sm bg-primary-700/10 py-1 px-2 lg:rounded-full
-            cursor-pointer hover:bg-primary-700/20 transition-colors duration-300"
+          className="block w-full lg:inline-block text-sm bg-primary-700/60 py-1 px-2 lg:rounded-full
+            cursor-pointer hover:bg-primary-700/40 transition-colors duration-300"
         >
-          <RiWallet3Line className="h-9 w-9 inline-block text-primary-700 mx-2" />
+          <RiWallet3Line className="h-9 w-9 inline-block text-white mx-2" />
           {truncateHash(account)}
         </button>
       )}
@@ -39,13 +39,13 @@ const ConnectWalletButton = ({action}: ButtonProps & { action?: (...args: any[])
       {!active && error && (
         <Button
           variant="outlined"
-          className="border-red-500 ring-red-600 hover:ring-red-400 focus:ring-red-400 text-red-600 !px-3 !py-1 text-sm hover:text-red-400 focus:text-red-400 focus-within:!text-red-400"
+          className="ring-white bg-primary-50 text-primary !px-3 !py-1 text-sm"
           onClick={() => {
             if(action) action();
             retry();
           }}
         >
-          Retry
+          Retry connecting
         </Button>
       )}
     </>
