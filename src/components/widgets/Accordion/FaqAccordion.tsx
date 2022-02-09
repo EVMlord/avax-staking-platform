@@ -20,9 +20,9 @@ interface FaqAccordionProps {
 
 export default function FaqAccordion({faqs, expandedUuids}: FaqAccordionProps) {
   return (
-    <div className="mt-8 md:mt-4 max-w-3xl mx-auto text-base">
+    <div className="mt-8 md:mt-4 w-full max-w-3xl mx-auto text-base">
       <Accordion
-        allowZeroExpanded
+        allowZeroExpanded={false}
         preExpanded={expandedUuids}
         className="text-left"
       >
@@ -50,7 +50,7 @@ export default function FaqAccordion({faqs, expandedUuids}: FaqAccordionProps) {
                 </AccordionItemHeading>
               )}
             </AccordionItemState>
-            <AccordionItemPanel className="w-11/12 mx-auto text-sm p-3 border-x-2 border-gray-400
+            <AccordionItemPanel className="mx-auto text-sm p-3 border-x-2 border-gray-400
               transition-all duration-300">
               <p>{faq.answer}</p>
             </AccordionItemPanel>
