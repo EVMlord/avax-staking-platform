@@ -25,7 +25,7 @@ export default function Auction() {
         </div>
         <div className="my-8">
           <div className="flex flex-col items-center lg:flex-row-reverse md:items-start gap-4">
-            <div className="w-full">
+            <div className="w-full overflow-x-auto">
               <h3 className="text-center text-gray-600">Auctions</h3>
               <StakingTable />
               <StakeForm className=" mt-8 shadow-md px-4 mx-auto lg:mx-0" />

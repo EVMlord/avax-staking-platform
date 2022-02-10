@@ -16,16 +16,15 @@ interface ModalInputProps {
 }
 
 const ModalInput = ({
-  max,
-  symbol,
   onChange,
   onSelectMax,
   value,
-  addLiquidityUrl,
   inputTitle,
+  max,
   decimals = 18,
 }: ModalInputProps) => {
-  const isBalanceZero = max === "0" || !max;
+  const maxNum = Number.parseFloat(max);
+  const isBalanceZero = !isNaN(maxNum) && maxNum === 0;
 
   const displayBalance = (balance: string) => {
     if (isBalanceZero) {
@@ -39,7 +38,7 @@ const ModalInput = ({
   return (
     <div className="relative">
       <div
-        className={`flex flex-col rounded-lg shadow-sm py-2 w-full ${
+        className={`flex flex-col rounded-lg shadow-sm py-2 w-full text-sm ${
           isBalanceZero ? "text-red-600" : ""
         }`}
       >
@@ -56,23 +55,16 @@ const ModalInput = ({
             onChange={onChange}
             placeholder="0"
             value={value}
-            className="p-1 text-gray-900 outline-none ring ring-transparent rounded focus:ring-primary-600"
+            className="p-1 text-base text-gray-900 outline-none ring ring-transparent rounded"
           />
-          <Button onClick={onSelectMax}>
+          <Button onClick={onSelectMax} variant="outlined" className="!p-2 ring-transparent rounded-full bg-gray-100 text-gray-600">
             Max
           </Button>
         </div>
       </div>
       {isBalanceZero && (
-        <p className="text-sm text-red-600">
-          No tokens to stake{" "}
-          <a
-            className="text-xs font-medium text-blue-400 underline"
-            href={addLiquidityUrl}
-            rel="noopener nofollow"
-          >
-            Click to get{" "}{ symbol }
-          </a>
+        <p className="text-xs text-red-400">
+          There are no tokens to stake.
         </p>
       )}
     </div>

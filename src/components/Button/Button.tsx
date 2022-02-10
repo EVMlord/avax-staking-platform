@@ -30,7 +30,7 @@ export default function Button({
 
     case "outlined":
       variantClass =
-        "bg-transparent text-white ring-2 hover:bg-white hover:text-primary-600 focus:text-primary-600 ring-white";
+        "bg-white shadow-lg ring-2 hover:bg-white hover:text-primary-600 focus:text-primary-600 ring-primary";
       break;
 
     default:

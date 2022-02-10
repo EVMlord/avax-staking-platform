@@ -44,12 +44,12 @@ export default function Stake() {
         </div>
         <div className="my-8">
           <div className="flex flex-col items-center lg:flex-row-reverse md:items-start gap-4">
-            <div className="w-full">
+            <div className="w-full overflow-x-auto">
               <h3 className="text-center text-gray-600">MY STAKES</h3>
               <StakingTable />
               <StakeForm className=" mt-8 shadow-md px-4 mx-auto lg:mx-0" />
             </div>
-            <div className="max-w-sm lg:max-w-xs p-2 mx-auto">
+            <div className="w-full max-w-sm lg:max-w-xs flex-shrink-0 p-2 mx-auto">
               <h3 className="text-center text-gray-600">Page FAQ</h3>
               <FaqAccordion
                 faqs={stakingFaqs}
