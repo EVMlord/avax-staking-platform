@@ -31,7 +31,7 @@ export default function Auction() {
               <StakeForm className=" mt-8 shadow-md px-4 mx-auto lg:mx-0" />
             </div>
             <div className="max-w-sm lg:max-w-xs p-2 mx-auto">
-              <h3 className="text-center text-gray-600">Page FAQ</h3>
+              <h3 className="text-center text-gray-600">Auction FAQ</h3>
               <FaqAccordion
                 faqs={auctionFaqs}
                 expandedUuids={["what_is_staking"]}

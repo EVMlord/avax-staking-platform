@@ -29,7 +29,7 @@ export default function HomePage() {
             </h1>
             <p className="my-4 py-2 text-white">
               The community has taken on this project and we're here to help it
-              succeed! Daily Auction Lobby, Daily AVALENCHE Dividends, Lucrative
+              succeed! Daily Auction Lobby, Daily AVALANCE Dividends, Lucrative
               Staking System, Completely Decentralized.
             </p>
             <div className="my-4 -mx-4">

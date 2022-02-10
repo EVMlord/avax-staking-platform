@@ -80,8 +80,8 @@ export const auctionFaqs = [
       the next 365 days but never goes lower than 1 million tokens per day.`,
   },
   {
-    question: "Buying tokens from exchnage or participating in auction?",
-    answer: `Auction lobbies are an other way to buy ASP tokens that might be more profitable
+    question: "Buying tokens from exchange or participating in auction?",
+    answer: `Auction lobbies are another way to buy ASP tokens that might be more profitable
       than purchasing on exchanges. Plus the ASP spent is rewarded back to Stakers.`,
   },
   {

@@ -36,7 +36,7 @@ export default function Stake() {
             </span>
           </div>
           <div className="text-lg text-gray-500">
-            VERAGE DIVIDENDS POOL{" "}
+            AVERAGE DIVIDENDS POOL{" "}
             <span className="inline-block ml-2 text-2xl font-semibold text-gray-500">
               0
             </span>
@@ -50,7 +50,7 @@ export default function Stake() {
               <StakeForm className=" mt-8 shadow-md px-4 mx-auto lg:mx-0" />
             </div>
             <div className="w-full max-w-sm lg:max-w-xs flex-shrink-0 p-2 mx-auto">
-              <h3 className="text-center text-gray-600">Page FAQ</h3>
+              <h3 className="text-center text-gray-600">Stake FAQ</h3>
               <FaqAccordion
                 faqs={stakingFaqs}
                 expandedUuids={["what_is_staking"]}
