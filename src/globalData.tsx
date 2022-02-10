@@ -25,15 +25,15 @@ export const links = [
 export const stakingFaqs = [
   {
     question: "What is staking?",
-    answer: `You can stake your GXY tokens for a fixed number of days to earn interest on them.
-      Make sure to stake more than 5 days to be eligible for bonus days rewards.At the end of
-      every day the daily stake pool of GXY tokens will be calculated and allocated proportionally
-      between all the open stakes. The allocated GXY tokens and TRX will be available for users to
+    answer: `You can stake your ASP tokens for a fixed number of days to earn interest on them.
+      Make sure to stake more than 5 days to be eligible for bonus days rewards. At the end of
+      every day the daily stake pool of ASP tokens will be calculated and allocated proportionally
+      between all the open stakes. The allocated ASP tokens and AVAX will be available for users to
       withdraw when the stake ends.`,
   },
   {
     question: "How is stake pool calculated?",
-    answer: `[GXY supply * 50000 / 5.42% inflation per year ], this daily pool will be distributed
+    answer: `[ASP supply * 50000 / 5.42% inflation per year ], this daily pool will be distributed
       between all the Stakers as their stake interest.`,
   },
   {
@@ -51,19 +51,19 @@ export const stakingFaqs = [
     answer: `You will get a penalty equal to the profit of half the days you committed to.`,
   },
   {
-    question: "Do I get TRON dividends for staking?",
-    answer: `Yes! One of the benefits of Staking GXY is TRON dividends.
-      At the end of each day a TRON dividends pool will be calculated and allocated to all the open
+    question: "Do I get AVAX dividends for staking?",
+    answer: `Yes! One of the benefits of Staking ASP is AVAX dividends.
+      At the end of each day a AVAX dividends pool will be calculated and allocated to all the open
       stakes based on their stake amount. The dividends pool comes from the daily auction lobby total
       entry amount.`,
   },
   {
     question: "How is dividends pool calculated?",
-    answer: `97% of all TRX that enters the daily Auction Lobby is pooled and distributed back out to Stakers.`,
+    answer: `97% of all ASP that enters the daily Auction Lobby is pooled and distributed back out to stakers.`,
   },
   {
-    question: "When will I recieve my TRON dividends?",
-    answer: `You will receive your TRX dividends after you exit your stake position.`,
+    question: "When will I recieve my AVAX dividends?",
+    answer: `You will receive your ASP dividends after you exit your stake position.`,
   },
 ];
 
