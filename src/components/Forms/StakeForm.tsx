@@ -4,6 +4,7 @@ import Button from "components/Button/Button";
 export default function StakeForm({ className }: { className?: string }) {
   const [stakeAmount, setStakeAmount] = useState("");
   const [daysToStake, setDaysToStake] = useState("");
+  const [fetching, setFetching] = useState(false);
 
   const handleChange: React.FormEventHandler<HTMLInputElement> = async (e) => {
     const input = e.currentTarget.name;
@@ -17,6 +18,8 @@ export default function StakeForm({ className }: { className?: string }) {
   };
   const handleStake: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    setFetching(true);
+    setTimeout(() => setFetching(false), 3000);
   };
   return (
     <div className={`border-b py-5 max-w-sm ${className}`}>
@@ -58,6 +61,7 @@ export default function StakeForm({ className }: { className?: string }) {
           type="submit"
           variant="secondary"
           className="py-2 px-5 w-full block my-4"
+          loading={fetching}
         >
           Stake
         </Button>

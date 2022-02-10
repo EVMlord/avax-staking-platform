@@ -1,8 +1,11 @@
 import React from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { RiLoader2Line } from "react-icons/ri";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
+  loading?: boolean;
   active?: boolean;
   variant?: "primary" | "secondary" | "outlined";
   children?: React.ReactNode;
@@ -12,6 +15,7 @@ export default function Button({
   className,
   label,
   active,
+  loading = false,
   variant = "primary",
   children,
   ...props
@@ -20,12 +24,12 @@ export default function Button({
 
   switch (variant) {
     case "primary":
-      variantClass =
-      `bg-white text-primary-600 hover:bg-primary-50/80 focus:bg-primary-50/80 ring-2 ring-primary-500`;
+      variantClass = `bg-white text-primary-600 hover:bg-primary-50/80 focus:bg-primary-50/80 ring-2 ring-primary-500`;
       break;
 
     case "secondary":
-      variantClass = "bg-primary-500 ring-primary text-white hover:bg-primary-600 focus:bg-primary-600";
+      variantClass =
+        "bg-primary-500 ring-primary text-white hover:bg-primary-600 focus:bg-primary-600";
       break;
 
     case "outlined":
@@ -45,7 +49,7 @@ export default function Button({
       {...props}
       title={label}
     >
-      {children || label}
+      {loading ? <RiLoader2Line className="h-6 w-6 mx-auto animate-spin" /> : children}
     </button>
   );
 }
