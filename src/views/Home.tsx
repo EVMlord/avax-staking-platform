@@ -10,8 +10,7 @@ export default function HomePage() {
   return (
     <Layout>
       <SEO
-        title="ASP Staking Platform"
-        slug="Home"
+        slug="/"
         pageDescription="Stake your ASP tokens within the Staking Portal and earn daily
           interest. Additionally, Stakers are rewarded AVAX tokens from the
           daily Lobbies based off the percentage of total tokens beign

@@ -10,7 +10,7 @@ export default function Auction() {
   return (
     <Layout>
       <SEO
-        slug="/auction"
+        slug="/auctions"
         title="Stake to earn more"
         pageDescription="Stake your AVAX tokens within the Auction Portal and earn daily interest.
             Additionally, Stakers are rewarded ASP tokens from the daily Lobbies based off the

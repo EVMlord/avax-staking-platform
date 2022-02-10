@@ -7,7 +7,7 @@ export default function Referrals() {
   return (
     <Layout>
       <SEO
-        slug="/stake"
+        slug="/referrals"
         title="Refer friends and earn even more"
         pageDescription="Your referrals will earn an extra 5% minted ASP tokens on their Auction
             Lobby Purchase. As a referrer you will earn an extra 10%. There are no limits on number
