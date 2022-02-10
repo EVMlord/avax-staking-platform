@@ -32,7 +32,7 @@ const ConnectWalletButton = ({action}: ButtonProps & { action?: (...args: any[])
         </button>
       )}
       {!active && !error && (
-        <Button onClick={openModal} variant="outlined" className="py-2 px-4 w-full md:w-auto">
+        <Button onClick={openModal} variant="outlined" className="py-2 text-primary px-4 w-full md:w-auto">
           Connect wallet
         </Button>
       )}
