@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
+//import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { RiLoader2Line } from "react-icons/ri";
 
 export interface ButtonProps
